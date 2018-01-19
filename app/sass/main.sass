@@ -179,7 +179,8 @@ h3, h4, .btn
 	font-family: Roboto-Bold
 ////////////////////////////////////
 h1, .h1 // 36px
-	font-size: 120px
+	// font-size: 120px
+	font-size: 20vmin
 h2, .h2 // 24px
 	font-size: 80px
 h3, .h3 // 21px
@@ -190,6 +191,22 @@ h4, .h4 // 18px
 // .FEATURES, .Portfolio, .Contact-us
 // 	background-color: #222ddd
 ////////////////////////////////////
+p
+  // font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px)
+
+  @function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) 
+    $k: ($f-max - $f-min)/($v-max - $v-min)
+    $b: $f-min - $k * $v-min
+
+    $b: $b * 1px
+
+    @return calc( #{$k} * 100vw + #{$b} )
+  
+  .fluid-font-size 
+    font-size: calcFluidFontSize(16, 48, 480, 1280)
+
+////////////////////////////////////
+
 body
 	padding-top: 63px
 header
@@ -208,6 +225,7 @@ header
 		top: 0
     transition: top 0.2s ease-in-out
 		width: 100%
+		z-index: 9999999
 		nav
 			a
 				white-space: nowrap
