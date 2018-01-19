@@ -83,10 +83,11 @@ ol, ul, li, a, p, span
 .btn 
 	max-width: 50vw
 	@media (max-width: 768px)
-		height: 60px
+		// height: 60px
 		font-size: 18px
 	width: 290px
-	height: 90px
+	min-height: 45px
+	max-height: 90px
 	border: none
 	border-radius: 35px
 	background-color: #fcb524
@@ -250,9 +251,10 @@ header
 			.navbar-collapse
 				a
 					padding-left: 45px
+					@media screen and (max-width: 768px)
+						padding-left: 0
 					&:hover
 						color: #fcb524			
-					
 	.header-main
 		padding-bottom: 10px
 		h1
@@ -316,8 +318,8 @@ header
 		// 	margin-top: 35px
 		button
 			@media (max-width: 992px)
-				height: 60px
-				width: 210px
+				// height: 60px
+				// width: 210px
 
 
 .Portfolio
@@ -340,7 +342,7 @@ header
 		.PF-img
 			margin-left: -15px
 			margin-right: -15px
-			height: 35vh
+			// height: 35vh
 			// left: 15px
 			overflow: hidden
 			border: 1px solid white
@@ -350,7 +352,7 @@ header
 
 				img
 					width: 100%
-					max-height: 100%
+					height: 100%
 					// outline: 1px solid #ffffff
 
 
@@ -396,13 +398,14 @@ header
 
 .Contact-us
 	padding-bottom: 25px
+	// padding-bottom: ( min-10px, max-25px )
 	.form-group
-		// min-width: 270px
 	.form-control, .form-control-inf
-		height: 65px
+		min-height: 45px
+		max-height: 65px
 		// margin-bottom: 35px
 	.form-massage
-		min-height: 200px
+		min-height: 150px
 		max-height: 600px
 		padding-top: 20px
 	.form-control, .form-control-inf, .form-massage
@@ -437,6 +440,8 @@ footer
 		font-size: 36px
 	h3
 		font-size: 25px
+	h2
+		padding: 25px 0 10px !important
 	h2:before
 		width: initial
 		top: 40px
@@ -519,6 +524,8 @@ footer
 		font-size: 36px
 	h3
 		font-size: 25px
+	h2
+		padding: 25px 0 0 0
 	h2:before
 		width: initial
 		top: 40px
@@ -537,7 +544,7 @@ footer
 		height: 40px
 		font-size: 12px
 	header
-		height: 240px
+		// height: 240px
 		.header-menu
 			padding: 0px
 			height: 0
@@ -554,26 +561,29 @@ footer
 				a 
 					margin-top: 10px
 		.header-main
-			height: 240px
+			// height: 240px
 			padding-bottom: 10px
 			h1
-				padding-top: 84px
-				padding-bottom: 25px
+				padding-top: 20vh
+				padding-bottom: 40vh
+				font-size: 10vh
 			button
-				margin-bottom: 40px
+				margin-bottom: 45px
+				font-size: 2.5vh
 
 	.main
 
 		.FEATURES
+			height: 200vh
 			padding: 60px 0 0
-			height: 150vh
+			// height: 150vh
 			.col-12:nth-child(1), .col-12:nth-child(2)
 				p 
 					padding-bottom: 0
 			.main-inf
 				position: relative
-				margin-bottom: 50px
-				height: 25vh
+				// margin-bottom: 50px
+				height: 50vh
 				h4
 					.fa
 						top: 5px
@@ -641,7 +651,7 @@ footer
 				padding: 0 0
 				.PF-img
 					left: 15px
-					height: 25vh
+					// height: 25vh
 					a>img
 						max-width: 100%
 						max-height: 100%
@@ -649,6 +659,7 @@ footer
 
 		.Sponsors
 			padding: 30px 0 20px
+			height: 50vh
 			.sponsor-logo
 				height: initial
 				margin: 0 auto
@@ -694,7 +705,7 @@ footer
 	.container
 		max-width: 720px
 	h1, h2
-		font-size: 80px
+		font-size: 15vh
 	h3
 		font-size: 36px
 	h4 
@@ -703,7 +714,17 @@ footer
 		font-size: 14px !important
 	button
 		font-size: 24px !important
-	///////////////SLICK////////////////
+
+////////////////viewport////////////////////
+	header, section
+		height: 100vh /* высота секции равна высоте области просмотра */
+		// width: auto /* Автоматическая ширина для пропорциональности высоты */
+		max-width: 100% /* Не больше ширины родительского элемента */
+		// max-height: 100vh /* Не превышая высоту viewport */
+		overflow: auto
+		align-items: center /* Центрирование по вертикали */
+////////////////viewport////////////////////
+///////////////SLICK////////////////
 	.slick-prev
 		left: 25px !important
 		right: initial !important
@@ -717,7 +738,7 @@ footer
 		transform: translate(4px,0) rotate(45deg)
 	.slick-next:before
 		transform: translate(-5px,0) rotate(-135deg)
-	///////////////SLICK////////////////
+///////////////SLICK////////////////
 	header
 		background-repeat: no-repeat
 		background-position: center
@@ -737,12 +758,10 @@ footer
 						h4
 							margin: 5px 0
 							font-size: 20px
-				ul
-					padding: 15px 0
-					li 
-						margin-left: 10px
-						a 
-							font-size: 12px
+				.navbar-collapse
+					a 
+						font-size: 12px
+						padding-left: 0
 		.header-main
 			padding-bottom: 150px
 			h1
