@@ -1,14 +1,6 @@
-// @import 'app.sass'
-@font-face
-	font-family: "Roboto-Light"
-	src : url("../fonts/roboto/Roboto-Light.ttf")
-@font-face
-	font-family: "Roboto-Bold"
-	src : url("../fonts/roboto/Roboto-Bold.ttf")
-@font-face
-	font-family: "Roboto-Black"
-	src : url("../fonts/roboto/Roboto-Black.ttf")
+@import 'app.sass'
 
+/////////////////// ICON BURGER //////////////////////
 .navbar-toggler-icon
 	position: absolute
 	right: 10px
@@ -16,9 +8,12 @@
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important
 	@media (max-width: 576px)
 		background-size: 180% 180% !important
+/////////////////// ICON BURGER //////////////////////
+
 ol, ul, li, a, p, span
 	margin: 0 0
 	padding: 0 0
+
 ////////////////////////////////////
 .ov-hidden
 	overflow: hidden
@@ -28,7 +23,7 @@ ol, ul, li, a, p, span
 	position: absolute
 ////////////////////////////////////
 
-///////////////SLICK////////////////
+///////////////SLICK-ARROW////////////////
 .slick-arrow
 	z-index: 1
 .slick-prev, .slick-next
@@ -77,17 +72,16 @@ ol, ul, li, a, p, span
 .slick-current span
 	display: block
 	transition: opacity 10s linear
-///////////////SLICK////////////////
+///////////////SLICK-ARROW////////////////
 
 //////////////BUTTON////////////////
-.btn 
+buton, .btn 
 	max-width: 50vw
 	@media (max-width: 768px)
-		// height: 60px
+		height: 60px
 		font-size: 18px
 	width: 290px
-	min-height: 45px
-	max-height: 90px
+	height: 90px
 	border: none
 	border-radius: 35px
 	background-color: #fcb524
@@ -114,23 +108,7 @@ ol, ul, li, a, p, span
 		box-shadow: none
 //////////////BUTTON////////////////
 
-////////////////viewport////////////////////
-section:not(.Our-team)
-	display: flex
-	justify-content: center /* Центрирование по горизонтали */
-header, section:not(.Our-team)
-	// position: relative
-	// flex-direction: collumn
-	height: 100vh /* высота секции равна высоте области просмотра */
-	// width: auto /* Автоматическая ширина для пропорциональности высоты */
-	max-width: 100% /* Не больше ширины родительского элемента */
-	// max-height: 100vh /* Не превышая высоту viewport */
-	overflow: auto
-	align-items: center /* Центрирование по вертикали */
-////////////////viewport////////////////////
-// section
-	// padding-bottom: 25px
-////////////////////////////////////
+///////////////////////////////////
 .form-control-inf
 	font-family: Roboto-Bold
 span
@@ -154,79 +132,90 @@ li
 p 
 	font-size: 18px
 ////////////////////////////////////
-h1, p
+p, h1
 	text-align: center
 	color: #ffffff
 h1, h2
 	text-align: center
 	font-family: Roboto-Black
 
-h2
-	color: #222222
-	position: relative
-	text-align: center
-	margin: 0
-	padding: 45px 0 25px 0
-	span:before
-		content: ' '
-		// width: 50%
-		height: 2px
-		background-color: #fcb524
-		position: absolute
-		left: -25px
-		right: -25px
-		bottom: 0px
 h3, h4, .btn
 	font-family: Roboto-Bold
 ////////////////////////////////////
-h1, .h1 // 36px
+h1 // 36px
 	// font-size: 120px
 	font-size: 20vmin
-h2, .h2 // 24px
+h2 // 24px
 	font-size: 80px
-h3, .h3 // 21px
+h3 // 21px
 	font-size: 54px
 	text-align: left !important
-h4, .h4 // 18px
+h4 // 18px
 	font-size: 36px
-// .FEATURES, .Portfolio, .Contact-us
-// 	background-color: #222ddd
 ////////////////////////////////////
 p
   // font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px)
 
-  @function calcFluidFontSize($f-min, $f-max, $v-min, $v-max) 
-    $k: ($f-max - $f-min)/($v-max - $v-min)
-    $b: $f-min - $k * $v-min
+////////////////viewport////////////////////
+section:not(.Our-team)
+	display: flex
+	justify-content: center /* Центрирование по горизонтали */
+header, section:not(.Our-team)
+	// position: relative
+	// flex-direction: collumn
+	height: 100vh /* высота секции равна высоте области просмотра */
+	// width: auto /* Автоматическая ширина для пропорциональности высоты */
+	max-width: 100% /* Не больше ширины родительского элемента */
+	// max-height: 100vh /* Не превышая высоту viewport */
+	overflow: auto
+	align-items: center /* Центрирование по вертикали */
+////////////////viewport////////////////////
 
-    $b: $b * 1px
+.Our-team, .Portfolio, .Contact-us
+	padding-top: 40px
+	h2
+		color: #222222
+		position: relative
+		text-align: center
+		// margin: 45px 0 0 0
+		// padding: 45px 0 25px 0
+		// padding: 50px 0 0px 0
+		padding: 0 0 5px 0
+		margin: 0
+		span:before
+			content: ' '
+			height: 2px
+			background-color: #fcb524
+			position: absolute
+			left: -25px
+			right: -25px
+			// bottom: 0px
+			bottom: 6px
 
-    @return calc( #{$k} * 100vw + #{$b} )
-  
-  .fluid-font-size 
-    font-size: calcFluidFontSize(16, 48, 480, 1280)
+/////////////////////////////////////////////////
 
-////////////////////////////////////
 
+///////////////// MAIN-STYLES ///////////////////
 body
-	padding-top: 63px
+	padding-top: 53px
 header
-	margin-top: -63px
+	margin-top: -53px
 	background-image: url("../img/Header-bg.jpg")
 	background-repeat: no-repeat
 	background-position: center
 	background-size: cover
-	// width: 100%
 	.header-menu
 		padding: 0px
 		// background-color: #f2f2
 		background-color: purple
-    height: 63px
+    height: 53px
 		position: fixed
 		top: 0
-    transition: top 0.2s ease-in-out
+    transition: top 0.3s ease-in-out
 		width: 100%
 		z-index: 9999999
+		// visibility: hidden
+		opacity: 0.8
 		nav
 			a
 				white-space: nowrap
@@ -236,6 +225,7 @@ header
 			.logo
 				display: inline-block
 				margin-right: 40px
+				padding: 0
 				@media (max-width: 768px)
 					position: absolute
 					left: 15px
@@ -254,7 +244,23 @@ header
 					@media screen and (max-width: 768px)
 						padding-left: 0
 					&:hover
-						color: #fcb524			
+						color: #fcb524		
+	// .header-menu:hover
+	// 	// visibility: visible
+	// 	opacity: 0.8
+	// 	transition: 0.5s ease-in-out	
+
+	// @media (max-width: 768px)
+	// 	.nav-up
+	// 		top: -53px
+	// 		opacity: 0.8
+	// 		transition: 0.3s
+	// #back-top
+	// 	position:fixed
+	// 	opacity: 0.8
+	// 	&:hover
+	// 		opacity: 0.8
+
 	.header-main
 		padding-bottom: 10px
 		h1
@@ -264,13 +270,11 @@ header
 			font-size: 30px
 			padding-bottom: 50px
 		button
-			margin: 0 auto 50px
+			margin: 0 auto 80px
 
-.nav-up
-	top: -63px
 
 .FEATURES
-	padding: 70px 0
+	padding: 60px 0 0
 	.col-12:nth-child(1), .col-12:nth-child(2)
 		p 
 			padding-bottom: 35px
@@ -286,7 +290,6 @@ header
 				color: #7f7f7f
 		h4, p 
 			padding-left: 50px
-			
 			color: #222222
 		p
 			text-align: left
@@ -295,20 +298,19 @@ header
 .Our-team
 	img
 		width: auto
-		// height: 579px
-		height: 75vh
+		height: 515px
+		// height: 85vh
+		// height: 75vh
 	.nadpis
 		top: 10px
 		left: 0
 		right: 0
 		color: #222222
-
 		h3
 			margin-top: 110px !important
 		p
 			font-size: 21px
 			margin-bottom: 20px
-
 		h3, p
 			text-align: left
 			color: #ffffff
@@ -324,16 +326,16 @@ header
 
 .Portfolio
 	.pf-others
-		// padding-bottom: 25px
+		padding-bottom: 0
 		a
 			color: #222222
 			position: relative
 			overflow: visible
-			padding: 3px 10px
+			padding: 0px 10px 10px
 			&:hover:before
 				content: ' '
 				position: absolute
-				top: 30px
+				top: 25px
 				left: -10px
 				right: -10px
 				height: 2px
@@ -342,18 +344,18 @@ header
 		.PF-img
 			margin-left: -15px
 			margin-right: -15px
+			// height: 37vh
 			// height: 35vh
+			// height: 100%
 			// left: 15px
 			overflow: hidden
 			border: 1px solid white
 			a
-				// display: flex
+				display: flex
 				justify-content: center
-
 				img
 					width: 100%
-					height: 100%
-					// outline: 1px solid #ffffff
+					height: 240px
 
 
 .Sponsors
@@ -397,17 +399,20 @@ header
 
 
 .Contact-us
-	padding-bottom: 25px
-	// padding-bottom: ( min-10px, max-25px )
+	padding-top: 0
+	margin-top: 40px
+	h2
+		padding: 0px 0 30px
 	.form-group
 	.form-control, .form-control-inf
-		min-height: 45px
-		max-height: 65px
+		@media (max-width: 768px)
+			// height: 45px
+		height: 65px
 		// margin-bottom: 35px
 	.form-massage
 		min-height: 150px
-		max-height: 600px
-		padding-top: 20px
+		// max-height: 600px
+		// padding-top: 20px
 	.form-control, .form-control-inf, .form-massage
 		padding-left: 50px
 	.form-control, .form-massage
@@ -418,7 +423,7 @@ header
 		span
 			color: #222222
 	button
-		min-width-top: 25px
+		margin: 30px auto 0
 		&:hover
 			// margin: 51px
 		&:active
@@ -427,504 +432,504 @@ header
 
 footer
 
-///////////// A d a p t i v e ///////////////
+// ///////////// A d a p t i v e ///////////////
 
-// Экстрамалые девайсы («телефоны», < 576px)
-// Нет @media, т.к. это по умолчанию в Bootstrap
+// // Экстрамалые девайсы («телефоны», < 576px)
+// // Нет @media, т.к. это по умолчанию в Bootstrap
 
-// Малые девайсы («ландшафтные телефоны», >= 576px)
-@media screen and (max-width: 320px) // col-sm
-	.container
-		max-width: 540px
-	h1, h2
-		font-size: 36px
-	h3
-		font-size: 25px
-	h2
-		padding: 25px 0 10px !important
-	h2:before
-		width: initial
-		top: 40px
-		left: -15px
-		right: -15px
-	h4
-		font-size: 25px
-	p
-		font-size: 14px
-	span
-		// font-size: 12px
-	a 
-		font-size: 12px
+// // Малые девайсы («ландшафтные телефоны», >= 576px)
+// @media screen and (max-width: 320px) // col-sm
+// 	.container
+// 		max-width: 540px
+// 	h1, h2
+// 		font-size: 36px
+// 	h3
+// 		font-size: 25px
+// 	h2
+// 		padding: 25px 0 10px !important
+// 	h2:before
+// 		width: initial
+// 		top: 40px
+// 		left: -15px
+// 		right: -15px
+// 	h4
+// 		font-size: 25px
+// 	p
+// 		font-size: 14px
+// 	span
+// 		// font-size: 12px
+// 	a 
+// 		font-size: 12px
 	 
-	.btn, button 
-		height: 40px
-		font-size: 12px
+// 	.btn, button 
+// 		height: 40px
+// 		font-size: 12px
 
-	.Our-team
-		h2
-			padding-bottom: 20px
-		img
-			width: 883px
-			height: 579px
-			@media (max-width: 320px)
-				height: 311px
-				width: auto
-		.nadpis
-			top: 10px
-			color: #222222
-			width: 100%
+// 	.Our-team
+// 		h2
+// 			padding-bottom: 20px
+// 		img
+// 			width: 883px
+// 			height: 579px
+// 			@media (max-width: 320px)
+// 				height: 311px
+// 				width: auto
+// 		.nadpis
+// 			top: 10px
+// 			color: #222222
+// 			width: 100%
 
-			h3, p
-				color: #ffffff
-				margin: 0 0 0 30px
-				max-width: 100vw
-				margin-left: auto
-				margin-right: auto
-			h3
-				margin-top: 113px !important
-				margin-bottom: 18px !important
-				padding-left: 30px !important
-				font-size: 22px !important
-			p
-				display: none
-			button 
-				height: 35px
-@media screen and (max-width: 576px) // col-sm
-	.container
-		max-width: 540px
-	///////////////SLICK////////////////
-	.slick-arrow
-		z-index: 1
-		position: relative
-	.slick-prev, .slick-next
-		// display: none
-		position: absolute
-		// background-color: none
-		content: ''
-		// color: #ffffff
-		border-radius: 50%
-		border: 1px solid #ffffff
-		width: 30px
-		height: 30px
-	.slick-prev
-		left: 10px !important
-		right: initial !important
-	.slick-next
-		right: 10px
-		left: initial
-	.slick-prev:before, .slick-next:before
-		height: 15px
-		width: 15px
-	.slick-prev:before
-		transform: translate(4px,0) rotate(45deg)
-	.slick-next:before
-		transform: translate(-5px,0) rotate(-135deg)
-	///////////////SLICK////////////////
-	h1, h2
-		font-size: 36px
-	h3
-		font-size: 25px
-	h2
-		padding: 25px 0 0 0
-	h2:before
-		width: initial
-		top: 40px
-		left: -15px
-		right: -15px
-	h4
-		font-size: 25px
-	p
-		font-size: 14px
-	span
-		// font-size: 12px
-	a 
-		font-size: 12px
+// 			h3, p
+// 				color: #ffffff
+// 				margin: 0 0 0 30px
+// 				max-width: 100vw
+// 				margin-left: auto
+// 				margin-right: auto
+// 			h3
+// 				margin-top: 113px !important
+// 				margin-bottom: 18px !important
+// 				padding-left: 30px !important
+// 				font-size: 22px !important
+// 			p
+// 				display: none
+// 			button 
+// 				height: 35px
+// @media screen and (max-width: 576px) // col-sm
+// 	.container
+// 		max-width: 540px
+// 	///////////////SLICK////////////////
+// 	.slick-arrow
+// 		z-index: 1
+// 		position: relative
+// 	.slick-prev, .slick-next
+// 		// display: none
+// 		position: absolute
+// 		// background-color: none
+// 		content: ''
+// 		// color: #ffffff
+// 		border-radius: 50%
+// 		border: 1px solid #ffffff
+// 		width: 30px
+// 		height: 30px
+// 	.slick-prev
+// 		left: 10px !important
+// 		right: initial !important
+// 	.slick-next
+// 		right: 10px
+// 		left: initial
+// 	.slick-prev:before, .slick-next:before
+// 		height: 15px
+// 		width: 15px
+// 	.slick-prev:before
+// 		transform: translate(4px,0) rotate(45deg)
+// 	.slick-next:before
+// 		transform: translate(-5px,0) rotate(-135deg)
+// 	///////////////SLICK////////////////
+// 	h1, h2
+// 		font-size: 36px
+// 	h3
+// 		font-size: 25px
+// 	h2
+// 		padding: 25px 0 0 0
+// 	h2:before
+// 		width: initial
+// 		top: 40px
+// 		left: -15px
+// 		right: -15px
+// 	h4
+// 		font-size: 25px
+// 	p
+// 		font-size: 14px
+// 	span
+// 		// font-size: 12px
+// 	a 
+// 		font-size: 12px
 	 
-	.btn, button 
-		height: 40px
-		font-size: 12px
-	header
-		// height: 240px
-		.header-menu
-			padding: 0px
-			height: 0
-			background-color: initial
-			nav 
-				button
-					border: none
-			.navbar-collapse
-				background-color: rgba(77, 10, 77, 0.8)
-				margin-top: -40px
-				padding-bottom: 40px
-				height: 240px
+// 	.btn, button 
+// 		height: 40px
+// 		font-size: 12px
+// 	header
+// 		// height: 240px
+// 		.header-menu
+// 			padding: 0px
+// 			height: 0
+// 			background-color: initial
+// 			nav 
+// 				button
+// 					border: none
+// 			.navbar-collapse
+// 				background-color: rgba(77, 10, 77, 0.8)
+// 				margin-top: -40px
+// 				padding-bottom: 40px
+// 				height: 240px
 
-				a 
-					margin-top: 10px
-		.header-main
-			// height: 240px
-			padding-bottom: 10px
-			h1
-				padding-top: 20vh
-				padding-bottom: 40vh
-				font-size: 10vh
-			button
-				margin-bottom: 45px
-				font-size: 2.5vh
+// 				a 
+// 					margin-top: 10px
+// 		.header-main
+// 			// height: 240px
+// 			padding-bottom: 10px
+// 			h1
+// 				padding-top: 20vh
+// 				padding-bottom: 40vh
+// 				font-size: 10vh
+// 			button
+// 				margin-bottom: 45px
+// 				font-size: 2.5vh
 
-	.main
+// 	.main
 
-		.FEATURES
-			height: 200vh
-			padding: 60px 0 0
-			// height: 150vh
-			.col-12:nth-child(1), .col-12:nth-child(2)
-				p 
-					padding-bottom: 0
-			.main-inf
-				position: relative
-				// margin-bottom: 50px
-				height: 50vh
-				h4
-					.fa
-						top: 5px
-						left: initial
-						right: 10px
-						position: absolute
-						font-size: 24px
-						color: #7f7f7f
-				h4, p 
-					padding-left: 0px
-					color: #222222
-				p
-					text-align: justify
+// 		.FEATURES
+// 			height: 200vh
+// 			padding: 60px 0 0
+// 			// height: 150vh
+// 			.col-12:nth-child(1), .col-12:nth-child(2)
+// 				p 
+// 					padding-bottom: 0
+// 			.main-inf
+// 				position: relative
+// 				// margin-bottom: 50px
+// 				height: 50vh
+// 				h4
+// 					.fa
+// 						top: 5px
+// 						left: initial
+// 						right: 10px
+// 						position: absolute
+// 						font-size: 24px
+// 						color: #7f7f7f
+// 				h4, p 
+// 					padding-left: 0px
+// 					color: #222222
+// 				p
+// 					text-align: justify
 
-		.Our-team
-			h2
-				padding-bottom: 20px
-			img
-				width: auto
-				height: 312px
-			.nadpis
-				top: 10px
-				color: #222222
-				width: 100%
+// 		.Our-team
+// 			h2
+// 				padding-bottom: 20px
+// 			img
+// 				width: auto
+// 				height: 312px
+// 			.nadpis
+// 				top: 10px
+// 				color: #222222
+// 				width: 100%
 
-				h3, p
-					color: #ffffff
-					margin: 0 0 0 30px
-					max-width: 100vw
-					margin-left: auto
-					margin-right: auto
-				h3
-					margin-top: 113px !important
-					margin-bottom: 13px !important
-					padding-left: 30px
-				p
-					display: none
-				button 
-					height: 40px
+// 				h3, p
+// 					color: #ffffff
+// 					margin: 0 0 0 30px
+// 					max-width: 100vw
+// 					margin-left: auto
+// 					margin-right: auto
+// 				h3
+// 					margin-top: 113px !important
+// 					margin-bottom: 13px !important
+// 					padding-left: 30px
+// 				p
+// 					display: none
+// 				button 
+// 					height: 40px
 				
 
 
-			// 	display: none
-			// .nadpis+ .center
-			// 	display: block
+// 			// 	display: none
+// 			// .nadpis+ .center
+// 			// 	display: block
 
-		.Portfolio
-			padding: 60px 0 60px
-			h2
-				padding-bottom: 15px
-				margin: 0
-			span
-				color: #222222
-				position: relative
-				margin: 0 10px
-				&:hover:before
-					content: ' '
-					position: absolute
-					top: 35px
-					height: 2px
-					background-color: #fcb524
-			.pf-others
-				padding-bottom: 15px
-			.col-4
-				padding: 0 0
-				.PF-img
-					left: 15px
-					// height: 25vh
-					a>img
-						max-width: 100%
-						max-height: 100%
-						outline: 1px solid #ffffff
+// 		.Portfolio
+// 			padding: 60px 0 60px
+// 			h2
+// 				padding-bottom: 15px
+// 				margin: 0
+// 			span
+// 				color: #222222
+// 				position: relative
+// 				margin: 0 10px
+// 				&:hover:before
+// 					content: ' '
+// 					position: absolute
+// 					top: 35px
+// 					height: 2px
+// 					background-color: #fcb524
+// 			.pf-others
+// 				padding-bottom: 15px
+// 			.col-4
+// 				padding: 0 0
+// 				.PF-img
+// 					left: 15px
+// 					// height: 25vh
+// 					a>img
+// 						max-width: 100%
+// 						max-height: 100%
+// 						outline: 1px solid #ffffff
 
-		.Sponsors
-			padding: 30px 0 20px
-			height: 50vh
-			.sponsor-logo
-				height: initial
-				margin: 0 auto
-			.sina-logo
-				position: relative
-				top: -45px
-			a
-				width: 90%
-				img
-					padding-top: 15px
-					padding-bottom: 16px
-				span
-					text-align: center
-					display: inline-block
+// 		.Sponsors
+// 			padding: 30px 0 20px
+// 			height: 50vh
+// 			.sponsor-logo
+// 				height: initial
+// 				margin: 0 auto
+// 			.sina-logo
+// 				position: relative
+// 				top: -45px
+// 			a
+// 				width: 90%
+// 				img
+// 					padding-top: 15px
+// 					padding-bottom: 16px
+// 				span
+// 					text-align: center
+// 					display: inline-block
 		
-		.Contact-us
-			padding: 60px 0 30px
-			h2
-				padding-bottom: 35px
-			button
-				margin-top: 0px
-				font-size: 20px
-				height: 55px
+// 		.Contact-us
+// 			padding: 60px 0 30px
+// 			h2
+// 				padding-bottom: 35px
+// 			button
+// 				margin-top: 0px
+// 				font-size: 20px
+// 				height: 55px
+
+// // ////////////////////////////////////
+// // // Средние девайсы («таблетки», >= 768px)
+
+// @media screen and (max-width: 768px) // col-md
+// 	.nadpis
+// 		width: 100%
+// 		top: 50px
+// 		h3, p
+// 			width: 70vw
+// 			text-align: left !important
+// 			margin-right: auto  !important
+// 			margin-left: auto  !important
+// 			margin-bottom: 30px  !important
+// 		p
+// 			margin-bottom: 50px !important
+
+// @media screen and (min-width: 576px) and (max-width: 768px) // col-md
+
+// 	.container
+// 		max-width: 720px
+// 	h1, h2
+// 		font-size: 15vh
+// 	h3
+// 		font-size: 36px
+// 	h4 
+// 		font-size: 25px
+// 	p
+// 		font-size: 14px !important
+// 	button
+// 		font-size: 24px !important
+
+// ////////////////viewport////////////////////
+// 	header, section
+// 		height: 100vh /* высота секции равна высоте области просмотра */
+// 		// width: auto /* Автоматическая ширина для пропорциональности высоты */
+// 		max-width: 100% /* Не больше ширины родительского элемента */
+// 		// max-height: 100vh /* Не превышая высоту viewport */
+// 		overflow: auto
+// 		align-items: center /* Центрирование по вертикали */
+// ////////////////viewport////////////////////
+// ///////////////SLICK////////////////
+// 	.slick-prev
+// 		left: 25px !important
+// 		right: initial !important
+// 	.slick-next
+// 		right: 25px
+// 		left: initial
+// 	.slick-prev:before, .slick-next:before
+// 		height: 25px
+// 		width: 25px
+// 	.slick-prev:before
+// 		transform: translate(4px,0) rotate(45deg)
+// 	.slick-next:before
+// 		transform: translate(-5px,0) rotate(-135deg)
+// ///////////////SLICK////////////////
+// 	header
+// 		background-repeat: no-repeat
+// 		background-position: center
+// 		background-size: cover
+// 		.header-menu
+// 			padding: 0px
+// 			background-color: initial
+// 			nav
+// 				.navbar-toggler
+// 					border: none
+// 					width: 0
+// 					&:focus
+// 						outline: none
+// 				.logo
+// 					a 
+// 						color: #ffffff
+// 						h4
+// 							margin: 5px 0
+// 							font-size: 20px
+// 				.navbar-collapse
+// 					a 
+// 						font-size: 12px
+// 						padding-left: 0
+// 		.header-main
+// 			padding-bottom: 150px
+// 			h1
+// 				padding-top: 266px
+// 				padding-bottom: 45px
+// 				font-size: 80px
+// 			button
+// 				margin: 0 auto 
+
+// 	.FEATURES
+// 		padding: 180px 0 90px
+// 		.col-12:nth-child(1), .col-12:nth-child(2)
+// 			p 
+// 				padding-bottom: 50px !important
+// 		.col-12
+			
+// 			.main-inf
+// 				h4 > .fa
+// 					display: inline
+// 					position: relative
+// 					top: 0px
+// 					left: initial
+// 					left: 15px
+// 					// right: 0
+// 					font-size: 22px
+// 					color: #7f7f7f
+// 				h4, p 
+// 					padding-left: 0
+// 					color: #222222
+// 				p
+// 					display: inline-block
+// 					text-align: left
+// 					padding-bottom: 80px
+		
+// 	.Our-team
+// 		h2
+// 			padding-bottom: 20px
+// 		img
+// 			width: 883px
+// 			height: 680px
+// 		.nadpis
+// 			top: 10px
+// 			color: #222222
+// 			width: 100%
+
+// 			h3, p
+// 				color: #ffffff
+// 				margin: 0 0 0 30px
+// 				max-width: 100vw
+// 				margin-left: auto
+// 				margin-right: auto
+// 			h3
+// 				margin-top: 240px !important
+// 				margin-bottom: 15px !important
+// 				padding-left: 30px
+// 			p
+// 				margin-bottom: 110px
+// 			button 
+// 				height: 75px
+			
+// 	.contact-us
+// 		button
+// 			font-size: 30px !important
+
 
 // ////////////////////////////////////
-// // Средние девайсы («таблетки», >= 768px)
+// // Большие девайсы (десктопы, >= 992px)
+// @media screen and (min-width: 768px) and (max-width: 992px) // col-lg
+// 	.container
+// 		max-width: 960px
 
-@media screen and (max-width: 768px) // col-md
-	.nadpis
-		width: 100%
-		top: 50px
-		h3, p
-			width: 70vw
-			text-align: left !important
-			margin-right: auto  !important
-			margin-left: auto  !important
-			margin-bottom: 30px  !important
-		p
-			margin-bottom: 50px !important
-
-@media screen and (min-width: 576px) and (max-width: 768px) // col-md
-
-	.container
-		max-width: 720px
-	h1, h2
-		font-size: 15vh
-	h3
-		font-size: 36px
-	h4 
-		font-size: 25px
-	p
-		font-size: 14px !important
-	button
-		font-size: 24px !important
-
-////////////////viewport////////////////////
-	header, section
-		height: 100vh /* высота секции равна высоте области просмотра */
-		// width: auto /* Автоматическая ширина для пропорциональности высоты */
-		max-width: 100% /* Не больше ширины родительского элемента */
-		// max-height: 100vh /* Не превышая высоту viewport */
-		overflow: auto
-		align-items: center /* Центрирование по вертикали */
-////////////////viewport////////////////////
-///////////////SLICK////////////////
-	.slick-prev
-		left: 25px !important
-		right: initial !important
-	.slick-next
-		right: 25px
-		left: initial
-	.slick-prev:before, .slick-next:before
-		height: 25px
-		width: 25px
-	.slick-prev:before
-		transform: translate(4px,0) rotate(45deg)
-	.slick-next:before
-		transform: translate(-5px,0) rotate(-135deg)
-///////////////SLICK////////////////
-	header
-		background-repeat: no-repeat
-		background-position: center
-		background-size: cover
-		.header-menu
-			padding: 0px
-			background-color: initial
-			nav
-				.navbar-toggler
-					border: none
-					width: 0
-					&:focus
-						outline: none
-				.logo
-					a 
-						color: #ffffff
-						h4
-							margin: 5px 0
-							font-size: 20px
-				.navbar-collapse
-					a 
-						font-size: 12px
-						padding-left: 0
-		.header-main
-			padding-bottom: 150px
-			h1
-				padding-top: 266px
-				padding-bottom: 45px
-				font-size: 80px
-			button
-				margin: 0 auto 
-
-	.FEATURES
-		padding: 180px 0 90px
-		.col-12:nth-child(1), .col-12:nth-child(2)
-			p 
-				padding-bottom: 50px !important
-		.col-12
-			
-			.main-inf
-				h4 > .fa
-					display: inline
-					position: relative
-					top: 0px
-					left: initial
-					left: 15px
-					// right: 0
-					font-size: 22px
-					color: #7f7f7f
-				h4, p 
-					padding-left: 0
-					color: #222222
-				p
-					display: inline-block
-					text-align: left
-					padding-bottom: 80px
-		
-	.Our-team
-		h2
-			padding-bottom: 20px
-		img
-			width: 883px
-			height: 680px
-		.nadpis
-			top: 10px
-			color: #222222
-			width: 100%
-
-			h3, p
-				color: #ffffff
-				margin: 0 0 0 30px
-				max-width: 100vw
-				margin-left: auto
-				margin-right: auto
-			h3
-				margin-top: 240px !important
-				margin-bottom: 15px !important
-				padding-left: 30px
-			p
-				margin-bottom: 110px
-			button 
-				height: 75px
-			
-	.contact-us
-		button
-			font-size: 30px !important
-
-
-////////////////////////////////////
-// Большие девайсы (десктопы, >= 992px)
-@media screen and (min-width: 768px) and (max-width: 992px) // col-lg
-	.container
-		max-width: 960px
-
-	header
-		.header-menu
-			padding: 0px
-			nav
-				.logo
-					margin-right: 30px
-					h4
-						margin: 5px 0
-						font-size: 25px
-					a
-						font-size: 10px
+// 	header
+// 		.header-menu
+// 			padding: 0px
+// 			nav
+// 				.logo
+// 					margin-right: 30px
+// 					h4
+// 						margin: 5px 0
+// 						font-size: 25px
+// 					a
+// 						font-size: 10px
 	
-	.Our-team
-		///////////////SLICK////////////////
-		.slick-prev
-			left: 5px
-		.slick-next
-			right: 5px
-		p 
-			text-align: left !important
-		///////////////SLICK////////////////
-		.nadpis
-			top: 10px
-			color: #222222
-			left: 0
-			right: 0
-			// max-width: 100vw
-			h3, p
-				color: #ffffff
-				margin-left: auto !important
-				margin-right: auto !important
-				text-align: center
-				max-width: 80vw
-			h3
-				margin-top: 150px
-			p
-				margin-top: 35px
-			button
-				margin-top: 30px
+// 	.Our-team
+// 		///////////////SLICK////////////////
+// 		.slick-prev
+// 			left: 5px
+// 		.slick-next
+// 			right: 5px
+// 		p 
+// 			text-align: left !important
+// 		///////////////SLICK////////////////
+// 		.nadpis
+// 			top: 10px
+// 			color: #222222
+// 			left: 0
+// 			right: 0
+// 			// max-width: 100vw
+// 			h3, p
+// 				color: #ffffff
+// 				margin-left: auto !important
+// 				margin-right: auto !important
+// 				text-align: center
+// 				max-width: 80vw
+// 			h3
+// 				margin-top: 150px
+// 			p
+// 				margin-top: 35px
+// 			button
+// 				margin-top: 30px
 
-	.Sponsors
-		padding: 30px 0  !important
-		.sina-logo
-			top: -10px !important
-			img
-				width: 70% !important
-				height: 70% !important
-			span
-				left: 20px
-				top: initial  !important
-				margin-top: 0px !important
-		span
-			font-size: 20px !important
-			margin-top: 20px !important
-		img
-			padding: initial !important
-		.sponsor-logo
-			height: 300px
-			text-align: center
-			a 
-				text-align: center
-				width: 100%
-				display: inline-block
-				img
-					padding-top: 130px
-					padding-bottom: 16px
-					min-width: 50%
-					max-width: 100%
-				span
-					text-align: left
-					display: inline-block
-					font-size: 24px	
+// 	.Sponsors
+// 		padding: 30px 0  !important
+// 		.sina-logo
+// 			top: -10px !important
+// 			img
+// 				width: 70% !important
+// 				height: 70% !important
+// 			span
+// 				left: 20px
+// 				top: initial  !important
+// 				margin-top: 0px !important
+// 		span
+// 			font-size: 20px !important
+// 			margin-top: 20px !important
+// 		img
+// 			padding: initial !important
+// 		.sponsor-logo
+// 			height: 300px
+// 			text-align: center
+// 			a 
+// 				text-align: center
+// 				width: 100%
+// 				display: inline-block
+// 				img
+// 					padding-top: 130px
+// 					padding-bottom: 16px
+// 					min-width: 50%
+// 					max-width: 100%
+// 				span
+// 					text-align: left
+// 					display: inline-block
+// 					font-size: 24px	
 					
-////////////////////////////////////
-// Экстрабольшие девайсы (большие десктопы, >= 1200px)
-@media screen and (min-width: 992px) and (max-width: 1200px) // col-xl
-	.container
-		max-width: 1140px
+// ////////////////////////////////////
+// // Экстрабольшие девайсы (большие десктопы, >= 1200px)
+// @media screen and (min-width: 992px) and (max-width: 1200px) // col-xl
+// 	.container
+// 		max-width: 1140px
 	
-@media screen and (min-width: 1200px) // col-xl
-	.container
-		max-width: 1140px
-	.slick-prev
-		left: 15%
-	.slick-next
-		right: 15%
-	header
-		.header-menu
-			nav
-				.logo>h4
-					font-size: 28px
-.collapse
-	display: none !important
-.collapse.show 
-	display: flex !important
+// @media screen and (min-width: 1200px) // col-xl
+// 	.container
+// 		max-width: 1140px
+// 	.slick-prev
+// 		left: 15%
+// 	.slick-next
+// 		right: 15%
+// 	header
+// 		.header-menu
+// 			nav
+// 				.logo>h4
+// 					font-size: 28px
+// .collapse
+// 	display: none !important
+// .collapse.show 
+// 	display: flex !important
