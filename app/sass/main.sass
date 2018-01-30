@@ -480,98 +480,203 @@ header
 				display: none/////
 
 .Portfolio
-	.pf-others
-		padding-bottom: 0
-		a
-			color: #222222
-			position: relative
-			overflow: visible
-			padding: 0px 10px 10px
-			&:hover:before
-				content: ' '
-				position: absolute
-				top: 25px
-				left: -10px
-				right: -10px
-				height: 2px
-				background-color: #fcb524
-		@media (min-width: 576px)	and (max-width: 768px)
-			a
-				padding-bottom: 15px
-		@media (min-width: 768px)
-			a
-				padding-top: 10px
-				padding-bottom: 30px
-		@media (min-width: 992px)
-			a
-				padding-top: 5px
-				padding-bottom: 25px
-		@media (min-width: 1200px)
-			a
-				padding-top: 0px
-				padding-bottom: 10px
-
-	.row
-		.col-6, .PF-img, a 
-			height: 28vh
-			overflow: hidden
-
-		.PF-img
-			margin-left: -15px
-			margin-right: -15px
-			overflow: hidden
-			border: 1px solid white
-			// height: 247px
-			a
-				img
-					width: 100%
-					height: 100%
-					display: flex
-					justify-content
-
 	@media (max-width: 576px)
-		padding: 0px
-		h2
-			padding-bottom: 0px
-			margin: 0
-		.pf-others
-			a
-				position: relative
-				margin: 0
-				padding: 4px
-				&:hover:before
-					top: 20px
-					left: 1px
-					right: 1px
-		.row
-			.col-6, .PF-img, a 
-				height: 28.6vh
-				overflow: hidden
-			.PF-img
-				a
-					img
-	@media (min-width: 576px)
-		padding-top: 3.5vh
-		.pf-others
-			padding-bottom: 0
-		.row
-			.col-6, .PF-img, a 
-				height: 38.6vh
-	@media (min-width: 768px)
-		padding-top: 5vh
-		.row
-			.col-6, .PF-img, a 
-				height: 34.5vh
-	@media (min-width: 992px)
-		padding-top: 3vw
-		.row
-			.col-6, .PF-img, a 
-				height: 34.5vh
-	@media (min-width: 1200px)
-		padding-top: 2.5vw
-		.row
-			.col-6, .PF-img, a 
-				height: 35.6vh
+		height: initial
+	h2
+		padding-bottom: 5.4vh
+	// .pf-others
+	// 	padding-bottom: 10vh
+	// 	a
+	// 		color: #222222
+	// 		position: relative
+	// 		overflow: visible
+	// 		padding: 0px 10px 10px
+	// 		&:hover:before
+	// 			content: ' '
+	// 			position: absolute
+	// 			top: 25px
+	// 			left: -10px
+	// 			right: -10px
+	// 			height: 2px
+	// 			background-color: #fcb524
+	// 	@media (min-width: 576px)	and (max-width: 768px)
+	// 		a
+	// 			padding-bottom: 15px
+	// 	@media (min-width: 768px)
+	// 		a
+	// 			padding-top: 10px
+	// 			padding-bottom: 30px
+	// 	@media (min-width: 992px)
+	// 		a
+	// 			padding-top: 5px
+	// 			padding-bottom: 25px
+	// 	@media (min-width: 1200px)
+	// 		a
+	// 			padding-top: 0px
+	// 			padding-bottom: 10px
+
+		// .col-6, .PF-img, a 
+		// 	height: 28vh
+		// 	overflow: hidden
+	.col-6
+		// height: 28vh
+		.grid-portfolio-item
+		  position: relative
+		  overflow: hidden
+		  height: 100%
+	  	margin-left: -15px
+	  	margin-right: -15px
+		  // margin-bottom: 30px
+		  &:hover .grid-portfolio-item-cover
+		    transition: all .5s
+		    left: 0
+		    width: 101%
+		  .grid-portfolio-image
+		    border: 1px solid #ffffff
+		    img
+		      width: 100%
+		      // height: 36vh
+		      // height: 95%
+		      @media (max-width: 576px)
+		      	height: 36vh
+		      	// padding: 0px
+		      	// h2
+		      		// padding-bottom: 0px
+		      		// margin: 0
+		      	// .pf-others
+		      	// 	a
+		      	// 		position: relative
+		      	// 		margin: 0
+		      	// 		padding: 4px
+		      	// 		&:hover:before
+		      	// 			top: 20px
+		      	// 			left: 1px
+		      	// 			right: 1px
+		      	// .col-6
+		      		// height: 28.6vh
+		      		// overflow: hidden
+		      @media (min-width: 576px)
+		     	 height: 37.5vh
+		      	// padding-top: 3.5vh
+		      	// .pf-others
+		      	// 	padding-bottom: 0
+		      	// .col-6
+		      		// height: 38.6vh
+		      @media (min-width: 768px)
+		     	 height: 36.4vh
+		      	// padding-top: 5vh
+		      	// .col-6
+		      		// height: 34.5vh
+		      @media (min-width: 992px)
+		     		height: 35.4vh
+		      	// padding-top: 3vw
+		      	// .col-6
+		      		// height: 34.5vh
+		      @media (min-width: 1200px)
+		     	 height: 35.4vh
+		      	// padding-top: 2.5vw
+		      	// .col-6
+		      		// height: 35.6vh
+		  .grid-portfolio-item-cover
+		    background-color: #ffb800
+		    position: absolute
+		    width: 100%
+		    top: 50%
+		    padding-left: 25.9%
+		    padding-right: 25.9%
+		    height: 160px
+		    margin-top: -80px
+		    display: table
+		    left: -100%
+		    transition: all 0.5s
+		    .grid-portfolio-item-content
+		      display: table-cell
+		      vertical-align: middle
+		      .grid-portfolio-work-title, .grid-portfolio-work-date
+		        color: #fff
+		      .grid-portfolio-work-title
+		        margin-bottom: 0
+		        line-height: 1
+		        font-size: 24px
+		        a
+		          color: inherit
+		          &:hover
+		            text-decoration: none
+		            + .grid-portfolio-work-icon-cover
+		              padding-left: 35px
+			              transition: all 0.5s
+		.grid-portfolio-item-cover
+		  padding-left: 18px
+		  padding-right: 18px
+		  height: 120px
+		  margin-top: -60px
+		.col-portfolio-full
+		  padding-left: 2px
+		  padding-right: 2px
+		  .grid-portfolio-item
+		    margin-bottom: 4px
+		    .grid-portfolio-image
+		      border: none
+		    .grid-portfolio-item-cover
+		      padding-left: 14.9%
+		      padding-right: 14.9%
+		      .grid-portfolio-work-title
+		        font-size: 20px
+		        .grid-portfolio-work-icon-cover
+		          padding-left: 31px
+		          transition: all 0.5s
+		      .grid-portfolio-work-date
+		        font-size: 16px
+		        line-height: 1
+
+		// .PF-img
+		// 	margin-left: -15px
+		// 	margin-right: -15px
+		// 	overflow: hidden
+		// 	border: 1px solid white
+		// 	// height: 247px
+		// 	a
+		// 		img
+		// 			width: 100%
+		// 			height: 100%
+		// 			display: flex
+		// 			justify-content
+
+	// @media (max-width: 576px)
+	// 	padding: 0px
+	// 	h2
+	// 		padding-bottom: 0px
+	// 		margin: 0
+	// 	.pf-others
+	// 		a
+	// 			position: relative
+	// 			margin: 0
+	// 			padding: 4px
+	// 			&:hover:before
+	// 				top: 20px
+	// 				left: 1px
+	// 				right: 1px
+	// 	.col-6
+	// 		// height: 28.6vh
+	// 		overflow: hidden
+	// @media (min-width: 576px)
+	// 	padding-top: 3.5vh
+	// 	// .pf-others
+	// 	// 	padding-bottom: 0
+	// 	.col-6
+	// 		// height: 38.6vh
+	// @media (min-width: 768px)
+	// 	padding-top: 5vh
+	// 	.col-6
+	// 		height: 34.5vh
+	// @media (min-width: 992px)
+	// 	padding-top: 3vw
+	// 	.col-6
+	// 		// height: 34.5vh
+	// @media (min-width: 1200px)
+	// 	padding-top: 2.5vw
+	// 	.col-6
+	// 		// height: 35.6vh
 
 .Sponsors
 	background-color: #fcb524
@@ -683,24 +788,28 @@ header
 			@media (min-width: 576px) and (max-width: 768px)
 				padding-top: 4vh
 				padding-bottom: 4vh
+
 	@media (max-width: 992px)
 		form h2
 			padding-top: 8.5vh
 	@media (max-width: 768px)
 		form h2
 			padding-top: 11vh
-	// .row > div:nth-child(3)
-	// 	margin-bottom: 7vh
-	.form-control, .form-control-inf
+
+	.form-control
 		// height: 65px
 		height: 9vh
+
 		@media (max-width: 768px)
 			// height: 50px
 			height: 6vh
+			
 	.form-massage
 		height: 24vh
+
 		@media (max-width: 768px)
 			max-height: 20vh
+
 	.form-control, .form-control-inf, .form-massage
 		padding-left: 50px
 	.form-control, .form-massage

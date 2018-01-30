@@ -37,3 +37,9 @@ $(window).scroll(function(){
 	  }
   }
 });
+
+$("*:not(body,nav)").on('click', function(){
+	$(".navbar-collapse").removeClass('show');
+	// console.log("alsdkjf");
+});
+// .navbar .navbar-toggler
